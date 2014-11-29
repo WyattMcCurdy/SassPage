@@ -1,0 +1,123 @@
+@import "normalize";
+
+@import "variables";
+
+@import "mixins";
+
+@import "sticky-footer";
+
+//*{
+//border: 1px solid red;
+//}
+
+body{
+    background: $dark-pink;
+    height: 750px;
+    color: $dark-pink;
+}
+
+.wrapper2{
+    margin: 0 auto;
+    max-width: 960px;
+   
+}
+
+.btn{
+    background: $light-pink;
+}
+
+//.iconic{width:70%; margin-top: 2rem;}
+
+.masthead{
+    color: $white-ish;
+    
+    background: $light-pink;
+    text-align: center;
+}
+
+.masthead h1 img{
+    min-width: 25%;
+    max-width: 60%;
+    }
+
+.box{
+    width: 70%;
+    background: $white-ish;
+    display:inline-block;
+    margin-left: 15%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    float: left;
+    text-align: center;
+}
+
+.row{
+    
+    @extend .clearfix;
+    background: $dark-pink;
+    margin: 0 auto;
+    //position: relative;
+    width: 100%;
+    float: left;
+}
+
+@media all and (max-width: 959px) and (min-width: 400px){
+
+.wrapper2{
+max-width: 400px;
+
+}
+    
+body{
+height: 1975px;
+}
+    
+.col-3{
+    
+    height: 300px;
+    width: 300px;
+    float: left;
+    margin-left: 50px;
+}
+
+.col-4{
+    float: left;
+    height: 200px;
+    width: 300px; 
+    margin-left: 50px;
+}
+}
+
+@media all and (min-width: $breakpoint-large){
+
+.box{
+    
+    display:block;
+    margin: 20px auto;
+    //float: left;
+    text-align: center;
+}
+
+.row{
+    
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+   float: left;
+}
+.col-3{
+    @include equalSpaced(3,20px,960px);
+    height: 300px;
+    //width: 300px;
+    //margin-left: 15px;
+   // margin-left: 2.5%;
+    //margin-right: 5%;
+}
+
+.col-4{
+    @include equalSpaced(4,40px,960px);
+    height: 200px;
+    //width: 200px;
+}
+
+}
